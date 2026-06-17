@@ -1,0 +1,53 @@
+{
+  "EMP-2026-0847": {
+    "employee_id": "EMP-2026-0847",
+    "name": "Priya Sharma",
+    "email": "priya.sharma@meridian.com",
+    "role": "Software Engineer",
+    "level": "L4",
+    "department": "Platform Engineering",
+    "manager_id": "EMP-2022-0103",
+    "manager_name": "Vikram Nair",
+    "employment_type": "fulltime",
+    "location": "Hyderabad Engineering Hub",
+    "start_date": "2026-06-15",
+    "access_profile": {
+      "github": "platform-team",
+      "jira": "platform-project",
+      "confluence": "platform-space",
+      "slack_channels": ["platform-team", "onboarding-agent-hyderabad", "all-engineering"]
+    }
+  },
+  "EMP-2022-0103": {
+    "employee_id": "EMP-2022-0103",
+    "name": "Vikram Nair",
+    "email": "vikram.nair@meridian.com",
+    "role": "Engineering Manager",
+    "level": "M2",
+    "department": "Platform Engineering",
+    "manager_id": "EMP-2020-0042",
+    "manager_name": "Anita Krishnan",
+    "employment_type": "fulltime",
+    "location": "Hyderabad Engineering Hub"
+  },
+  "EMP-2026-0848": {
+    "employee_id": "EMP-2026-0848",
+    "name": "Rahul Mehta",
+    "email": "rahul.mehta@meridian.com",
+    "role": "Software Engineer",
+    "level": "L3",
+    "department": "Data Engineering",
+    "manager_id": "EMP-2021-0078",
+    "manager_name": "Sneha Iyer",
+    "employment_type": "contractor",
+    "contractor_end_date": "2026-12-15",
+    "location": "Remote",
+    "start_date": "2026-06-15",
+    "access_profile": {
+      "github": "data-team-readonly",
+      "jira": "data-project",
+      "confluence": "data-space-readonly",
+      "slack_channels": ["data-team", "all-engineering"]
+    }
+  }
+}

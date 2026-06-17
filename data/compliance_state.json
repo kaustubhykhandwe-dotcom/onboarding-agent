@@ -1,0 +1,20 @@
+{
+  "EMP-2026-0847": {
+    "employee_id": "EMP-2026-0847",
+    "code_of_conduct": "PENDING",
+    "data_handling_policy": "PENDING",
+    "security_guidelines": "PENDING",
+    "posh_training": "PENDING",
+    "last_updated": "2026-06-10T08:30:00Z",
+    "overall_status": "PENDING"
+  },
+  "EMP-2026-0848": {
+    "employee_id": "EMP-2026-0848",
+    "code_of_conduct": "CLEARED",
+    "data_handling_policy": "CLEARED",
+    "security_guidelines": "PENDING",
+    "posh_training": "PENDING",
+    "last_updated": "2026-06-10T09:15:00Z",
+    "overall_status": "PENDING"
+  }
+}
