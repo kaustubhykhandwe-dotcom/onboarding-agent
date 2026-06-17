@@ -152,6 +152,11 @@ git remote -v
 
 ## 7) Create your branch
 
+A **branch** is your own copy of the code where you can make changes without
+touching the main version. When you are happy with your work, GitHub compares
+your branch against `main` and that comparison becomes your pull request. This
+keeps `main` safe while you experiment.
+
 Use one branch for your work:
 
 ```powershell
@@ -185,6 +190,16 @@ Start with the dry run:
 ```powershell
 python agent.py --dry-run
 ```
+
+The real run needs a Groq API key. Get one for free:
+
+1. Open <https://console.groq.com>
+2. Sign up or log in
+3. Go to `API Keys` and click `Create API Key`
+4. Copy the key somewhere safe - you cannot view it again later
+
+The free tier is enough for this workshop. The key is a secret: never commit it
+to Git and never paste it into a file that gets pushed.
 
 If the dry run passes, set your API key and run the real agent:
 

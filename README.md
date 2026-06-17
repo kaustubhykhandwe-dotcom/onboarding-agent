@@ -7,10 +7,13 @@ pull request with a real change.
 
 ## Start here
 
-1. Read [docs/offline_guide.md](docs/offline_guide.md)
-2. Read [docs/resources.md](docs/resources.md)
-3. Skim [system_prompt.md](system_prompt.md) and [agent.py](agent.py)
-4. Run `python agent.py --dry-run`
+1. Read [docs/concepts.md](docs/concepts.md) - what an AI agent is
+2. Read [docs/scenario_brief.md](docs/scenario_brief.md) - the worked example
+3. Read [docs/offline_guide.md](docs/offline_guide.md) - setup, Git, and PR steps
+4. Read [docs/resources.md](docs/resources.md)
+5. Skim [system_prompt.md](system_prompt.md) and [agent.py](agent.py)
+6. Run `python agent.py --dry-run`
+7. Do the exercise in [docs/first_task.md](docs/first_task.md) and open a PR
 
 ## What this repo demonstrates
 
@@ -49,9 +52,10 @@ python agent.py --employee EMP-2026-0847
 python agent.py --employee EMP-2026-0847 --no-enforcement
 ```
 
-The full run requires `GROQ_API_KEY` to be set. The offline guide walks
-through the setup, virtual environment, and GitHub pull request flow step
-by step.
+The full run requires a `GROQ_API_KEY`. Get one free at
+<https://console.groq.com> (sign up, then create an API key). The free tier is
+enough for this workshop. The offline guide walks through the setup, virtual
+environment, API key, and GitHub pull request flow step by step.
 
 ## Repo layout
 

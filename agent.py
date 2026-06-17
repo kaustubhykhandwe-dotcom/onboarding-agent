@@ -260,10 +260,14 @@ def run_agent(employee_id: str, system_prompt: str, max_steps: int = 15) -> dict
     if history:
         print(f"  [cache] Resuming session for {employee_id} ({len(history)} previous step(s) loaded)")
 
+    # ReAct loop: each pass = Reason -> Act -> Observe. The loop ends when the
+    # agent returns 'complete', hits a parse error, or reaches max_steps.
     for step_num in range(len(history) + 1, max_steps + 1):
         print(f"\n+--- STEP {step_num} {'-'*44}")
 
-        # REASON
+        # REASON: rebuild the prompt with the full history so the model can see
+        # everything that has happened, ask the model what to do next, then
+        # parse its free-text answer into a structured action.
         prompt = build_prompt(system_prompt, history, TOOL_SCHEMAS, goal)
         raw    = call_llm(prompt)
         action = parse_thought(raw)
@@ -271,7 +275,9 @@ def run_agent(employee_id: str, system_prompt: str, max_steps: int = 15) -> dict
         thought = action.get('thought', '').strip() or '(no explicit thought)'
         print(f"| THOUGHT: {thought[:200]}")
 
-        # ACT
+        # ACT + OBSERVE: carry out the action the model chose. After a tool
+        # call we append the result (the OBSERVATION) to history so the next
+        # REASON pass can see it.
         if action['type'] == 'call_tool':
             tool_name = action['tool']
             tool_in   = action['input']
