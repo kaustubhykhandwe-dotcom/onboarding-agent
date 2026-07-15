@@ -28,8 +28,15 @@
     "manager_id": "EMP-2020-0042",
     "manager_name": "Anita Krishnan",
     "employment_type": "fulltime",
-    "location": "Hyderabad Engineering Hub"
+    "location": "Hyderabad Engineering Hub",
+    "access_profile": {
+      "github": "platform-manager",
+      "jira": "platform-project",
+      "confluence": "platform-space",
+      "slack_channels": ["platform-team", "engineering-managers", "all-engineering"]
+    }
   },
+
   "EMP-2026-0848": {
     "employee_id": "EMP-2026-0848",
     "name": "Rahul Mehta",
@@ -49,5 +56,25 @@
       "confluence": "data-space-readonly",
       "slack_channels": ["data-team", "all-engineering"]
     }
+  },
+  "EMP-2026-0849": {
+    "employee_id": "EMP-2026-0849",
+    "name": "Arjun Reddy",
+    "email": "arjun.reddy@meridian.com",
+    "role": "Software Engineer",
+    "level": "L4",
+    "department": "Platform Engineering",
+    "manager_id": "EMP-2022-0103",
+    "manager_name": "Vikram Nair",
+    "employment_type": "fulltime",
+    "location": "Hyderabad Engineering Hub",
+    "start_date": "2026-06-15",
+    "access_profile": {
+      "github": "platform-team",
+      "jira": "platform-project",
+      "confluence": "platform-space",
+      "slack_channels": ["platform-team", "all-engineering"]
+    }
   }
 }
+

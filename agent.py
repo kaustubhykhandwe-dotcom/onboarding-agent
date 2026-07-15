@@ -122,13 +122,25 @@ def call_llm(prompt: str) -> str:
     from groq import Groq
     api_key = os.environ.get('GROQ_API_KEY')
     if not api_key:
-        raise RuntimeError("GROQ_API_KEY not set. Run: export GROQ_API_KEY=your-key")
+        for env_path in [os.path.join(ROOT, '.env'), os.path.expanduser('~/.env')]:
+            if os.path.exists(env_path):
+                with open(env_path) as f:
+                    for line in f:
+                        if line.strip().startswith('GROQ_API_KEY='):
+                            api_key = line.split('=', 1)[1].strip().strip('"').strip("'")
+                            os.environ['GROQ_API_KEY'] = api_key
+                            break
+            if api_key:
+                break
+    if not api_key:
+        raise RuntimeError("GROQ_API_KEY not set. Run: export GROQ_API_KEY=your-key or set it in a .env file")
     client = Groq(api_key=api_key)
     response = client.chat.completions.create(
         model='llama-3.3-70b-versatile',
         messages=[{"role": "user", "content": prompt}]
     )
     return response.choices[0].message.content
+
 
 
 # ── THOUGHT PARSER ───────────────────────────────────────────────
